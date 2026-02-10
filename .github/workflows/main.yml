@@ -20,6 +20,6 @@ jobs:
            app.get("/", (req,res)=>{res.send("Hello World")});
            app.listen(4000, ()=>{console.log("Listening at port 4000");});' > app.mjs 
            npm install express
-           node app.js
+           node app.mjs
         - name: Start ngrok tunnel
           run: ngrok http 4000 

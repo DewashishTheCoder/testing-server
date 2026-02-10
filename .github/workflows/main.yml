@@ -6,5 +6,8 @@ jobs:
     timeout-minutes: 360
     steps:
         - name: make pc on 
-          run: timeout 6h node app.mjs
+          run: |
+           echo "import express from "express"\nconst app = express()\napp.get('/',(req,res)=>{res.send("Hello World")})\napp.listen(4000,()=>{console.log("Listening at port 4000");})" >> app.js
+           npm install express
+           node app.js
 

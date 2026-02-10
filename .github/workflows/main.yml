@@ -13,6 +13,8 @@ jobs:
            sudo apt install ngrok
         - name: Set ngrok auth token
           run: ngrok config add-authtoken 39SiDoXKNWuK9wCuxtTGFlDdgRG_iWXHs9fRuQSg7se1oA5U
+        - name: Start ngrok tunnel
+          run: ngrok http 4000 
         - name: make pc on 
           run: |
            echo 'import express from "express";
@@ -20,6 +22,5 @@ jobs:
            app.get("/", (req,res)=>{res.send("Hello World")});
            app.listen(4000, ()=>{console.log("Listening at port 4000");});' > app.mjs 
            npm install express
-           ngrok http 4000 
            node app.mjs
 

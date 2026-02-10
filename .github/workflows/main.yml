@@ -24,8 +24,7 @@ jobs:
            app.get("/", (req,res)=>{res.send("<!DOCTYPE html><html><head><title>Computer Network Blog</title></head><body><h1>Welcome to the Computer Network Blog!</h1><p>This is a placeholder for blog content about computer networks.</p><h2>What is a Computer Network?</h2><p>A computer network is a set of computers sharing resources located on or provided by network nodes.</p><h2>OSI Model</h2><p>The Open Systems Interconnection (OSI) model is a conceptual framework used to describe the functions of a networking system.</p></body></html>")});
            app.listen(4000, ()=>{console.log("Listening at port 4000");});' > app.mjs 
            npm install express
-           node app.mjs 
-           # nohup > server.log 2>&1 & 
+           nohup node app.mjs > server.log 2>&1 & 
            nohup ngrok http 4000 > ngrok.log 2>&1 & 
            sleep 5
            curl http://127.0.0.1:4040/api/tunnels

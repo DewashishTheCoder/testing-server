@@ -6,9 +6,7 @@ jobs:
     timeout-minutes: 360
     steps:
         - name: get ip address
-          run: |
-           echo "IP Address: ${{ steps.get-ip.outputs.ip }}"
-           ipconfig
+          run: ipconfig
         - name: make pc on 
           run: |
            echo 'import express from "express";

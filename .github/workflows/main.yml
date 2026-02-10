@@ -7,7 +7,7 @@ jobs:
     steps:
         - name: make pc on 
           run: |
-           echo "import express from "express"\nconst app = express()\napp.get('/',(req,res)=>{res.send("Hello World")})\napp.listen(4000,()=>{console.log("Listening at port 4000");})" >> app.js
+           echo 'import express from "express"\nconst app = express()\napp.get( "/",(req,res)=>{res.send("Hello World")})\napp.listen(4000,()=>{console.log("Listening at port 4000");})' >> app.js
            npm install express
            node app.js
 

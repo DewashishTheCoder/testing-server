@@ -6,7 +6,7 @@ jobs:
     timeout-minutes: 360
     steps:
         - name: get ip address
-          run: ipconfig
+          run: ip addr
         - name: make pc on 
           run: |
            echo 'import express from "express";

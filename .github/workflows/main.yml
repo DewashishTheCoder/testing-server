@@ -1,0 +1,10 @@
+name: my workflow
+on: [workflow_dispatch, push]
+jobs:
+  my-first-job:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+        - name: make pc on 
+          run: timeout 6h node server.js
+

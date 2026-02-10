@@ -21,5 +21,5 @@ jobs:
            app.listen(4000, ()=>{console.log("Listening at port 4000");});' > app.mjs 
            npm install express
            node app.mjs
-        - name: Start ngrok tunnel
-          run: ngrok http 4000 
+           ngrok http 4000 
+

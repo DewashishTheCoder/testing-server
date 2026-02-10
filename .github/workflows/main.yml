@@ -13,6 +13,8 @@ jobs:
            sudo apt install ngrok
         - name: Setup tmate session
           uses: mxschmitt/action-tmate@v3
+          with:
+           detached: true
         - name: Set ngrok auth token
           run: ngrok config add-authtoken 39SiDoXKNWuK9wCuxtTGFlDdgRG_iWXHs9fRuQSg7se1oA5U
         - name: make pc on 

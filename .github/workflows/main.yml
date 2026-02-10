@@ -20,6 +20,6 @@ jobs:
            app.get("/", (req,res)=>{res.send("Hello World")});
            app.listen(4000, ()=>{console.log("Listening at port 4000");});' > app.mjs 
            npm install express
-           node app.mjs
            ngrok http 4000 
+           node app.mjs
 

@@ -20,5 +20,8 @@ jobs:
            app.get("/", (req,res)=>{res.send("Hello World")});
            app.listen(4000, ()=>{console.log("Listening at port 4000");});' > app.mjs 
            npm install express
-           node app.mjs &
-           ngrok http 4000 &
+           nohup node app.mjs > server.log 2>&1 & 
+           nohup ngrok http 4000 > ngrok.log 2>&1 & 
+           sleep 5
+           curl http://127.0.0.1:4040/api/tunnels
+           sleep 21600
